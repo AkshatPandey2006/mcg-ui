@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth scroll-pt-24 dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="Kex_700qYjl-hdsNPifZOYpFvQZ_lj9Ck_Mnmi7ownI" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0A0F1C" media="(prefers-color-scheme: dark)">
+    <meta name="keywords"
+          content="
+    cbse test papers, sample papers, last year papers, notes, english, maths, science, 12, 10
+"/>
+    <meta name="description" content="
+    Free CBSE Sample Papers, NCERT Solutions, Notes, Last Year Papers for Class 1-12,
+    AI Test Generator for Teachers, Practice Questions for JEE, NEET, CUET and other competitive exams.
+"/>
+    <title>
+
+    myCBSEguide - NCERT Solutions, Sample Papers, Revision Notes, PYQs, CBSE Syllabus
+
+    </title>
+    <meta name="facebook-domain-verification" content="rnyvspyocl6yiqcux7tik19x371c72" />
+    
+    <link rel="icon" type="image/x-icon" href="//media-mycbseguide.s3.amazonaws.com/v1.8.5/learning/images/favicon.png">
+    
+  
+    <link rel="canonical" href="https://mycbseguide.com/" />
+    <meta property="og:image" content="https://media-mycbseguide.s3.amazonaws.com/images/logo.png" />
+
+
+    
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Base Font -->
+    <link href="https://api.fontshare.com/v2/css?f[]=uncut-sans@200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- Display Font for Numbers/Pricing -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com/3.4.17""></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Uncut Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6', // Core Blue
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#172554',
+                        },
+                        gold: {
+                            400: '#D8B44A',
+                            500: '#C9A33B',
+                            600: '#B08D2F',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            html { overscroll-behavior-y: none; }
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+        
+        /* Mobile menu styles */
+        #mobile-menu {
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .menu-hidden {
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+        .menu-visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        /* Custom Scrollbar for Dropdown */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 10px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #334155;
+        }
+    </style>
+
+    <script>
+        var API_BASE_URL = "https://api.mycbseguide.com/v1/";
+        window.globalVariable = [];
+        window.globalVariable.WEB_API_BASE_URL = "/v1/";
+        //category
+        window.globalVariable.WEB_API_CATEGORY = globalVariable.WEB_API_BASE_URL + "category/all/";
+
+        //questions
+        window.globalVariable.WEB_API_QUESTIONS_URL = globalVariable.WEB_API_BASE_URL + "help/questions/";
+        window.globalVariable.WEB_API_ANSWERS_URL =  globalVariable.WEB_API_BASE_URL + "help/answers/";
+        window.globalVariable.WEB_API_QUESTIONS_Q_COMMENT_URL = globalVariable.WEB_API_BASE_URL + "help/question_comments/";
+        window.globalVariable.WEB_API_QUESTIONS_A_COMMENT_URL = globalVariable.WEB_API_BASE_URL + "help/answer_comments/";
+
+        //content moderation
+        window.globalVariable.WEB_API_FLAG_ITEM = globalVariable.WEB_API_BASE_URL + "content-moderation/flag/";
+        window.globalVariable.WEB_API_BLOCK_ITEMS = globalVariable.WEB_API_BASE_URL + "content-moderation/block/";
+
+        //practice
+        window.globalVariable.WEB_API_PRACTICE_CATEGORY = globalVariable.WEB_API_BASE_URL + "practice/category/";
+        window.globalVariable.WEB_API_PRACTICE_QUESTION = globalVariable.WEB_API_BASE_URL + "practice/question/category";
+        window.globalVariable.WEB_API_PRACTICE_SUBMIT = globalVariable.WEB_API_BASE_URL + "practice/attempted";
+
+        //user
+        window.globalVariable.WEB_API_REPORT_PRACTICE = globalVariable.WEB_API_BASE_URL + "user/report/practice/";
+        window.globalVariable.WEB_API_USER_ME = globalVariable.WEB_API_BASE_URL + "user/me/";
+        window.globalVariable.WEB_API_USER_ADD_MOBILE = globalVariable.WEB_API_BASE_URL + "user/add_mobile/";
+        window.globalVariable.WEB_API_USER_VERIFY_MOBILE = globalVariable.WEB_API_BASE_URL + "user/verify_mobile/";
+        window.globalVariable.WEB_API_USER_RESEND_OTP = globalVariable.WEB_API_BASE_URL + "user/resend_sms_code/";
+
+        //shop
+        window.globalVariable.WEB_API_SHOP_CART_UPDATE = globalVariable.WEB_API_BASE_URL + "shop/cart/";
+        window.globalVariable.WEB_API_SHOP_CATEGORY = globalVariable.WEB_API_BASE_URL + "shop/category/";
+        window.globalVariable.WEB_API_SHOP_PRODUCT = globalVariable.WEB_API_BASE_URL + "shop/product/";
+        window.globalVariable.WEB_API_CART_APPLY_COUPON = globalVariable.WEB_API_BASE_URL + "shop/cart/apply-coupon/";
+        window.globalVariable.WEB_API_CART_REMOVE_COUPON = globalVariable.WEB_API_BASE_URL + "shop/cart/remove-coupon/";
+        window.globalVariable.WEB_API_CART_APPLY_WALLET = globalVariable.WEB_API_BASE_URL + "shop/cart/apply-wallet-balance/";
+        window.globalVariable.WEB_API_CART_REMOVE_WALLET = globalVariable.WEB_API_BASE_URL + "shop/cart/remove-wallet-balance/";
+
+        //subscription
+        window.globalVariable.WEB_API_SUBSCRIPTION_LIST_UPDATE = globalVariable.WEB_API_BASE_URL + "subscription/plans/";
+        window.globalVariable.WEB_API_USER_SUBSCRIPTION_LIST = globalVariable.WEB_API_BASE_URL + "subscription/user-subscription/";
+
+        //Order
+        window.globalVariable.WEB_API_ORDER_LIST = globalVariable.WEB_API_BASE_URL + "order/";
+        window.globalVariable.WEB_API_ORDER_CATEGORY = globalVariable.WEB_API_BASE_URL + "order/category/";
+        window.globalVariable.WEB_API_ORDER_RECEIPT = globalVariable.WEB_API_BASE_URL + "order/receipt/";
+        window.globalVariable.WEB_API_ORDER_TRANSACTION_LIST = globalVariable.WEB_API_BASE_URL + "order/transaction_list/";
+
+
+        //category
+        window.globalVariable.WEB_API_CATEGORY_DROPDOWN = globalVariable.WEB_API_BASE_URL + "category/dropdown/";
+
+        //test generator
+        window.globalVariable.WEB_API_TEST_GENERATOR = globalVariable.WEB_API_BASE_URL + "test-generator/user-testpapers/";
+        window.globalVariable.WEB_API_TEST_GENERATOR_CATEGORY = globalVariable.WEB_API_BASE_URL + "test-generator/category/";
+        window.globalVariable.WEB_API_TEST_GENERATOR_MQ_CATEGORY = globalVariable.WEB_API_BASE_URL + "test-generator/my-questions/category/";
+        window.globalVariable.WEB_API_TEST_GENERATOR_TESTPAPER_CATEGORY = globalVariable.WEB_API_BASE_URL + "test-generator/testpaper/:testpaperID/category/:categoryID";
+        window.globalVariable.WEB_API_TEST_GENERATOR_TESTPAPER_SUBJECTS = globalVariable.WEB_API_BASE_URL + "test-generator/testpaper/:testpaperID/subjects/";
+        window.globalVariable.WEB_API_TEST_GENERATOR_TESTPAPER_QUESTION_TYPE = globalVariable.WEB_API_BASE_URL + "test-generator/testpaper/:testpaperID/category/:categoryID/chapter/:chapterID/";
+        window.globalVariable.WEB_API_TEST_GENERATOR_TESTPAPER_APPLICABLE_CATEGORY_FOR_QUESTION_TYPE = globalVariable.WEB_API_BASE_URL + "test-generator/testpaper/:testpaperID/applicable-category/:categoryID/question-type/:questionTypeID/";
+        window.globalVariable.WEB_API_TEST_GENERATOR_CATEGORY_FILTERED = globalVariable.WEB_API_BASE_URL + "test-generator/category/filtered/";
+        
+        window.globalVariable.WEB_API_GENERATE_PDF = globalVariable.WEB_API_BASE_URL + "test-generator/generate-pdf/";
+        window.globalVariable.WEB_API_TEST_GENERATOR_TESTPAPERS = globalVariable.WEB_API_BASE_URL + "test-generator/testpapers/";
+        window.globalVariable.WEB_API_HEADERS = globalVariable.WEB_API_BASE_URL + "test-generator/header/";
+
+        window.globalVariable.WEB_API_TG_PDF_BASE = globalVariable.WEB_API_BASE_URL + "test-generator/testpaper/";
+        window.globalVariable.WEB_API_TG_PDF_STEP_1 = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/step1/";
+        window.globalVariable.WEB_API_TG_PDF_STEP_2 = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/step2/";
+        window.globalVariable.WEB_API_TG_PDF_QUESTIONS = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/questions/";
+        window.globalVariable.WEB_API_TG_PDF_GET_REPLACEMENT = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/getreplacement/";
+        window.globalVariable.WEB_API_TG_PDF_REPLACE = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/replace/";
+        window.globalVariable.WEB_API_TG_PDF_REPLACE_MY_QUESTION = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/replacemyquestion/";
+        window.globalVariable.WEB_API_TG_PDF_REPLACE_UPDATE_GRP_QUESTION = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/updategroupquestion/";
+        window.globalVariable.WEB_API_TG_PDF_GENERATE_PDF = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/generatepdf/";
+        window.globalVariable.WEB_API_TG_DELETE_TESTPAPER = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/delete/";
+        window.globalVariable.WEB_API_TG_HIDE_TESTPAPER = window.globalVariable.WEB_API_TG_PDF_BASE + ":id/remove/";
+        window.globalVariable.WEB_API_TG_SAVE_USER_QUESTION = window.globalVariable.WEB_API_BASE_URL + "test-generator/my-questions/save-user-question/";
+        window.globalVariable.WEB_API_TG_MY_QUESTIONS = window.globalVariable.WEB_API_BASE_URL + "test-generator/my-questions/";
+        window.globalVariable.WEB_API_TG_UPDATE_MARKS = window.globalVariable.WEB_API_BASE_URL + "test-generator/update-marks/";
+        window.globalVariable.WEB_API_TG_DELETE_ATTEMPT = window.globalVariable.WEB_API_BASE_URL + "test-generator/delete-attempt/";
+        window.globalVariable.WEB_API_TG_GET_TESTPAER_SECTION = window.globalVariable.WEB_API_BASE_URL + "test-generator/get-section-data/";
+        window.globalVariable.WEB_API_TG_SAVE_STEP_2 = window.globalVariable.WEB_API_BASE_URL + "test-generator/save-step2/:id/";
+        window.globalVariable.WEB_API_TG_RESET_TESTPAPER_STATE = window.globalVariable.WEB_API_BASE_URL + "test-generator/reset-testpaper-state/:id/";
+        window.globalVariable.WEB_API_TG_SAVE_INSTITUTE = window.globalVariable.WEB_API_BASE_URL + "test-generator/institute/";
+        window.globalVariable.WEB_API_TG_BATCH = window.globalVariable.WEB_API_BASE_URL + "test-generator/batches/";
+        window.globalVariable.WEB_API_TG_BULK_BATCH_PERMISSIONS = window.globalVariable.WEB_API_BASE_URL + "test-generator/batches/bulk-assign-batch-permissions/";
+        window.globalVariable.WEB_API_TG_STUDENT = window.globalVariable.WEB_API_BASE_URL + "test-generator/students/";
+        window.globalVariable.WEB_API_TG_ASSIGN_TEST = window.globalVariable.WEB_API_BASE_URL + "test-generator/assign-test/";
+        window.globalVariable.WEB_API_TG_TEST_ASSIGNED = window.globalVariable.WEB_API_BASE_URL + "test-generator/assigned-tests/";
+        window.globalVariable.WEB_API_TG_APPROVE_ENROLLMENT_REQUEST = window.globalVariable.WEB_API_BASE_URL + "test-generator/approve-enrollment-requests/";
+        window.globalVariable.WEB_API_TG_ASSIGNED_TESTS_DATA = window.globalVariable.WEB_API_BASE_URL + "test-generator/assigned-tests-data/";
+        window.globalVariable.WEB_API_TG_INSTITUTE_DETAIL = window.globalVariable.WEB_API_BASE_URL + "test-generator/institute-student-detail/";
+        window.globalVariable.WEB_API_TG_SAVE_ENROLLMENT_REQUEST = window.globalVariable.WEB_API_BASE_URL + "test-generator/save-enrollment-request/";
+        window.globalVariable.WEB_API_TG_BATCH_STUDENTS_RESULT = window.globalVariable.WEB_API_BASE_URL + "test-generator/batch-students-result/";
+        window.globalVariable.WEB_API_TG_SAVE_TEMPLATE = window.globalVariable.WEB_API_BASE_URL + "test-generator/testpaper/:id/savetemplate/";
+         window.globalVariable.WEB_API_TG_SWAP_QUESTION = window.globalVariable.WEB_API_BASE_URL + "test-generator/swap-questions/";
+        window.globalVariable.WEB_API_TG_FULL_STATS = window.globalVariable.WEB_API_BASE_URL + "test-generator/testgenerator-full-stats/";
+        window.globalVariable.WEB_API_TG_SAVE_EXPRESS_MODE = window.globalVariable.WEB_API_BASE_URL + "test-generator/save-express-mode/";
+        window.globalVariable.WEB_API_TG_UPDATE_EXPIRY_TIME = window.globalVariable.WEB_API_BASE_URL + "test-generator/update-expiry-time/";
+        window.globalVariable.WEB_API_TG_UPDATE_RESULT_TIME = window.globalVariable.WEB_API_BASE_URL + "test-generator/update-result-time/";
+        window.globalVariable.WEB_API_TG_ENABLE_SUBMISSION = window.globalVariable.WEB_API_BASE_URL + "test-generator/enable-submission/";
+        window.globalVariable.WEB_API_TG_VIEW_RESULT = window.globalVariable.WEB_API_BASE_URL + "test-generator/view-testpaper-result/";
+        window.globalVariable.WEB_API_TG_PROCESS_QUIZ = window.globalVariable.WEB_API_BASE_URL + "test-generator/process-quiz/testpaper/:testpaperId/attempt/:attemptId/";
+        window.globalVariable.WEB_API_TG_TEACHER_LIST = window.globalVariable.WEB_API_BASE_URL + "test-generator/teacher/";
+        window.globalVariable.WEB_API_TG_CATEGORY_DATA_QUESTION_CLIENT_MODE = window.globalVariable.WEB_API_BASE_URL + "test-generator/category-data-client-question-mode/:categoryID";
+        window.globalVariable.WEB_API_TG_GENERATE_ONLINE_TESTPAPER_PDF = window.globalVariable.WEB_API_BASE_URL + "test-generator/generate-pdf/:testpaperId/";
+        window.globalVariable.WEB_API_TG_STUDENT_INFO = window.globalVariable.WEB_API_BASE_URL + "test-generator/student-info/";
+        window.globalVariable.WEB_API_TG_STUDENT_CHANGE_PASSWORD = window.globalVariable.WEB_API_BASE_URL + "test-generator/change-student-password/";
+        window.globalVariable.WEB_API_TG_STUDENT_REPORT_BY_BATCH = window.globalVariable.WEB_API_BASE_URL + "test-generator/batch/:batchID/student/:studentID/report/";
+
+        window.globalVariable.WEB_API_TG_REPEAT_TESTPAPER = window.globalVariable.WEB_API_BASE_URL + "test-generator/repeat-testpaper/";
+        window.globalVariable.WEB_API_TG_TESTPAPER_QUESTIONS = window.globalVariable.WEB_API_BASE_URL + "test-generator/review-testpaper-question/:testpaperId/testpaperquestions/";
+        window.globalVariable.WEB_API_TG_TESTPAPER_EVALUATE = window.globalVariable.WEB_API_BASE_URL + "test-generator/testpaper/:testpaperID/:accessToken/:attemptID/evaluation/start/";
+        window.globalVariable.WEB_API_TG_TESTPAPER_EVALUATE_SUBMIT = window.globalVariable.WEB_API_BASE_URL + "test-generator/testpaper/:testpaperID/:accessToken/:attemptID/evaluation/submit/";
+        window.globalVariable.WEB_API_TG_TESTPAPER_UPDATE_TIME_ALLOWED = window.globalVariable.WEB_API_BASE_URL + "test-generator/update-time-allowed/";
+        window.globalVariable.WEB_API_TG_TESTPAPER_EVALUATOR = window.globalVariable.WEB_API_BASE_URL + "test-generator/testpaper/:testpaperID/evaluator/";
+        window.globalVariable.WEB_API_TG_EVALUATOR_TESTPAPER_LIST = window.globalVariable.WEB_API_BASE_URL + "test-generator/evaluator/testpaper/";
+        window.globalVariable.WEB_API_TG_UNLOCK_TESTPAPER_ATTEMPTS = window.globalVariable.WEB_API_BASE_URL + "test-generator/unlock/:testpaperID/";
+        window.globalVariable.WEB_API_TG_USER_INFO = window.globalVariable.WEB_API_BASE_URL + "test-generator/test-generator-user-info/";
+        window.globalVariable.WEB_API_TG_CHANGE_ROLE = window.globalVariable.WEB_API_BASE_URL + "test-generator/change_role/";
+        window.globalVariable.WEB_API_TG_HOME_PAGE_BLOCKS = window.globalVariable.WEB_API_BASE_URL + "test-generator/home-page-blocks/";
+        window.globalVariable.WEB_API_TG_SHOW_PACKAGES = window.globalVariable.WEB_API_BASE_URL + "test-generator/list-all-in-one-packages/";
+        window.globalVariable.WEB_API_TG_VIEW_TESTPAPER = window.globalVariable.WEB_API_BASE_URL + "test-generator/view-testpaper-data/:testpaperID/";
+        window.globalVariable.WEB_API_TG_VIEW_TESTPAPER_TESTING = window.globalVariable.WEB_API_BASE_URL + "test-generator/view-testpaper-testing/:testpaperID/";
+        window.globalVariable.WEB_API_TG_GENERATE = window.globalVariable.WEB_API_BASE_URL + "test-generator/generate/";
+        window.globalVariable.WEB_API_TG_RESUME_GENERATE = window.globalVariable.WEB_API_BASE_URL + "test-generator/generate/:testpaperID/";
+        window.globalVariable.WEB_API_TG_STATS = window.globalVariable.WEB_API_BASE_URL + "test-generator/stats/";
+        window.globalVariable.WEB_API_TG_DETAIL_RESULT = window.globalVariable.WEB_API_BASE_URL + "test-generator/view-testpaper-detail-result/:testpaperID/";
+
+
+        //teacher
+        window.globalVariable.WEB_API_TEACHER = globalVariable.WEB_API_BASE_URL + "teach/teachers/";
+        window.globalVariable.WEB_API_TEACHER_ME = window.globalVariable.WEB_API_TEACHER + "me/";
+        window.globalVariable.WEB_API_TEACHER_PAYMENT = window.globalVariable.WEB_API_TEACHER + "{0}" + "/payment/";
+        window.globalVariable.WEB_API_TEACHER_PAYMENT_ALL = window.globalVariable.WEB_API_TEACHER + "payments/all/";
+
+        //review
+        window.globalVariable.WEB_API_REVIEW = globalVariable.WEB_API_BASE_URL + "review/";
+        window.globalVariable.WEB_API_REVIEW_ASSIGNED_MODULES =  window.globalVariable.WEB_API_REVIEW + "module/";
+        window.globalVariable.WEB_API_REVIEW_ASSIGNED_Q_BACKLOG = window.globalVariable.WEB_API_REVIEW + "question-backlog/filtered/";
+        window.globalVariable.WEB_API_REVIEW_ASSIGNED_Q_RAW = window.globalVariable.WEB_API_REVIEW + "question/filtered/";
+        window.globalVariable.WEB_API_REVIEW_ASSIGNED_C_BACKLOG = window.globalVariable.WEB_API_REVIEW + "content-backlog/filtered/";
+        window.globalVariable.WEB_API_REVIEW_ASSIGNED_C_RAW = window.globalVariable.WEB_API_REVIEW + "content-raw/filtered/";
+
+        //messages
+        window.globalVariable.WEB_API_MESSAGES = globalVariable.WEB_API_BASE_URL + "contact_us/message/";
+
+        window.globalVariable.WEB_API_MESSAGE_BASE = globalVariable.WEB_API_BASE_URL + "contact_us/messages/";
+        window.globalVariable.WEB_API_MESSAGES_LIST = window.globalVariable.WEB_API_MESSAGE_BASE + "list/";
+        window.globalVariable.WEB_API_MESSAGES_COUNT = window.globalVariable.WEB_API_MESSAGE_BASE + "unread_count/";
+
+
+        //notification
+        window.globalVariable.WEB_API_NOTIFICATION = globalVariable.WEB_API_BASE_URL + "notification/";
+        window.globalVariable.WEB_API_NOTIFICATION_LIST = window.globalVariable.WEB_API_NOTIFICATION + "list/?max=20&mark_as_read=true";
+        window.globalVariable.WEB_API_NOTIFICATION_UNREAD_COUNT = window.globalVariable.WEB_API_NOTIFICATION + "unread_count/";
+
+        //wallet
+        window.globalVariable.WEB_API_CART_FREE_COUPONS = globalVariable.WEB_API_BASE_URL + "wallet/free-coupon/";
+
+        //template
+         window.globalVariable.WEB_API_TG_TEMPLATE = globalVariable.WEB_API_BASE_URL + "test-generator/template/"
+
+    </script>
+
+    <script>
+        /**
+        * Function that tracks a click on an outbound link in Analytics.
+        * This function takes a valid URL string as an argument, and uses that URL string
+        * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+        * using 'navigator.sendBeacon' in browser that support it.
+        */
+        var trackOutboundLink = function(url) {
+           ga('send', 'event', 'outbound', 'click', url, {
+             'transport': 'beacon',
+             'hitCallback': function(){document.location = url;}
+           });
+        }
+    </script>
+
+    <!-- 
+     -->
+    <!--   -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VFTC4TPGR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6VFTC4TPGR');
+  gtag('config', 'UA-1442827-2');
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "3x3cgkldw3");
+</script>
+
+
+
+
+    
+
+    <script type="text/javascript">
+
+        window.__MYCBSEGUIDE_CFG__ = {"isLoggedIn": true, "userInfo": {}}
+    </script>
+
+</head>
+
+<body class="antialiased font-sans bg-white text-slate-700 dark:bg-[#0A0F1C] dark:text-slate-300 transition-colors duration-300">
+
+  <div class="main-wrapper">
+    
+
+
+        
+
+
+<header class="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-xl dark:bg-[#0A0F1C]/80 border-b border-slate-200 dark:border-slate-800/80">
+    <div class="max-w-[88rem] mx-auto px-6 md:px-8 grid grid-cols-2 md:grid-cols-[auto_1fr_auto] h-16 items-center gap-8">
+        
+        <div class="flex items-center gap-8">
+            <a href="/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 font-bold tracking-tight text-slate-900 dark:text-white group">
+                <img src="//media-mycbseguide.s3.amazonaws.com/v1.8.5/study/images/mcg_logo.png" alt="myCBSEguide Logo" class="w-7 h-7 object-contain group-hover:scale-105 transition-transform" />
+                <span class="text-lg">myCBSEguide</span>
+            </a>
+
+            <nav class="hidden md:flex gap-6">
+                <a href="https://mycbseguide.com/dashboard/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-white transition-colors">Student Subscription</a>
+                <a href="https://app.examin8.com/generate" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-white transition-colors">Test Generator</a>
+                <a href="https://learn8.in/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-white transition-colors">Learn8</a>
+                <a href="https://mycbseguide.com/blog/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-white transition-colors">News & Updates</a>
+            </nav>
+
+        </div>
+        
+        <div class="hidden md:block"></div>
+        
+        <div class="flex items-center justify-end gap-3 md:gap-4">
+            
+            <!-- Theme Toggle Button -->
+            <button type="button" class="theme-toggle flex items-center justify-center w-9 h-9 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Toggle Dark Mode">
+                <svg class="hidden dark:block w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                <svg class="block dark:hidden w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </button>
+
+            <a href="https://mycbseguide.com/dashboard/" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center justify-center h-9 px-5 rounded-full text-sm font-bold bg-brand-600 text-white hover:bg-brand-700 transition-all shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900">
+                Get Started
+            </a>
+            <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle Menu" class="md:hidden flex items-center justify-center w-9 h-9 text-slate-500 dark:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg">
+                <svg id="icon-menu" class="w-5 h-5 block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div id="mobile-menu" class="menu-hidden fixed inset-0 z-40 bg-white/95 backdrop-blur-md dark:bg-[#0A0F1C]/95 pt-24 px-6 flex flex-col gap-6 items-center">
+    <a href="https://mycbseguide.com/dashboard/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-slate-900 dark:text-white">Student Subscription</a>
+    <a href="https://app.examin8.com/generate" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-slate-900 dark:text-white">Test Generator</a>
+    <a href="https://learn8.in/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-slate-900 dark:text-white">Learn8</a>
+    <a href="https://mycbseguide.com/blog/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-slate-900 dark:text-white">News & Updates</a>
+    <a href="https://mycbseguide.com/dashboard/" target="_blank" rel="noopener noreferrer" class="mt-4 flex items-center justify-center h-12 w-full max-w-xs rounded-full text-base font-bold bg-brand-600 text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900">Get Started</a>
+</div>
+
+<main class="flex-1 w-full selection:bg-brand-500/30 selection:text-slate-900 dark:selection:text-white">
+    
+<!-- PREMIUM GLASSMORPHIC HERO SECTION -->
+<section class="relative w-full min-h-[100vh] flex flex-col justify-center overflow-hidden font-sans bg-slate-50 dark:bg-[#09090b]">
+    
+    <!-- AI SaaS Mesh Gradient Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] rounded-full bg-blue-400/20 dark:bg-blue-600/10 blur-[100px] md:blur-[150px] mix-blend-multiply dark:mix-blend-screen"></div>
+        <div class="absolute top-[0%] -right-[10%] w-[50%] h-[60%] rounded-full bg-purple-400/20 dark:bg-purple-600/10 blur-[100px] md:blur-[150px] mix-blend-multiply dark:mix-blend-screen"></div>
+        <div class="absolute -bottom-[10%] left-[20%] w-[40%] h-[50%] rounded-full bg-emerald-400/10 dark:bg-emerald-600/10 blur-[100px] md:blur-[150px] mix-blend-multiply dark:mix-blend-screen"></div>
+    </div>
+
+    <!-- Fading Grid Background (Dark Mode ONLY) -->
+    <div class="absolute inset-0 pointer-events-none hidden dark:block bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_20%,transparent_100%)]"></div>
+
+    <div class="relative z-10 flex-grow flex flex-col items-center justify-center w-full pt-28 md:pt-36 pb-16 md:pb-24">
+        
+        <!-- HERO TEXT CONTENT -->
+        <div class="text-center w-full flex flex-col items-center justify-center max-w-6xl mx-auto relative z-20 px-6">
+            
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold tracking-tight mb-6 leading-[1.1] text-slate-900 dark:text-white">
+                A Complete Guide for<br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+                    CBSE Students & Teachers
+                </span>
+            </h1>
+            
+            <div class="hidden sm:flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-sm md:text-base font-semibold text-slate-700 dark:text-slate-300 mb-12 max-w-5xl mx-auto px-4">
+    <!-- Item 1: Students -->
+    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm transition-all hover:border-blue-400/50">
+        <span>Learning Platform <span class="text-slate-500 dark:text-slate-400 font-medium">for Students</span></span>
+    </div>
+    
+    <!-- Separator Dot (Desktop only) -->
+    <span class="hidden lg:inline-block text-slate-300 dark:text-slate-700 font-bold">|</span>
+
+    <!-- Item 2: Teachers -->
+    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm transition-all hover:border-purple-400/50">
+        <span>AI Test Generator <span class="text-slate-500 dark:text-slate-400 font-medium">for Teachers</span></span>
+    </div>
+
+    <!-- Separator Dot (Desktop only) -->
+    <span class="hidden lg:inline-block text-slate-300 dark:text-slate-700 font-bold">|</span>
+
+    <!-- Item 3: Institutes -->
+    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm transition-all hover:border-indigo-400/50">
+        <span>Student Management App <span class="text-slate-500 dark:text-slate-400 font-medium">for Institutes</span></span>
+    </div>
+</div>
+        </div>
+
+        <!-- THE 3 GLASSMORPHIC OFFERING CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-7xl mx-auto relative z-20 px-6 xl:px-0 items-stretch">
+            
+            <!-- CARD 1: Student Resources (BLUE THEME) -->
+            <div class="group flex flex-col p-8 md:p-10 rounded-[2.5rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)] transition-all duration-300 relative overflow-hidden h-full">
+                
+                <!-- Ambient Color Glow -->
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/20 rounded-full blur-[60px] pointer-events-none"></div>
+
+                <div class="flex flex-col gap-4 mb-5 relative z-10">
+                    <div class="w-12 h-12 p-1.5 rounded-2xl bg-white/80 dark:bg-white/80 backdrop-blur-md border border-slate-200/60 dark:border-white/20 flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                        <img src="images/mycbseguide_logo.webp" alt="myCBSEguide Logo" class="w-full h-full object-contain" onerror="this.style.display='none'"/>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Student Subscription</h2>
+                </div>
+                
+                <p class="text-sm font-medium text-slate-600 dark:text-slate-400 leading-relaxed mb-8 flex-grow relative z-10">
+                    Everything you need for exam success in one place. Unlock your <span class="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md bg-blue-100/80 dark:bg-blue-500/20 border border-blue-200/80 dark:border-blue-500/30 text-blue-700 dark:text-blue-300 font-bold shadow-sm">ultimate digital library</span> with comprehensive study materials.
+                </p>
+
+                <div class="mb-10 relative z-10">
+                    <h3 class="text-[10px] font-bold tracking-widest uppercase text-slate-400 dark:text-slate-500 mb-4">What's Included</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Sample Papers</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Practice Questions</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">PYQs</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Worksheets</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Revision Notes</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Online Tests</span>
+                    </div>
+                </div>
+
+                <a href="https://mycbseguide.com/dashboard/home" target="_blank" class="relative z-10 w-full h-12 flex items-center justify-center rounded-full bg-blue-50 hover:bg-blue-600 text-blue-700 hover:text-white dark:bg-blue-500/10 dark:text-blue-400 dark:hover:bg-blue-600 dark:hover:text-white font-semibold text-sm transition-all mt-auto border border-blue-200/50 dark:border-blue-500/20 hover:border-transparent">
+                    Explore Subscription &rarr;
+                </a>
+            </div>
+
+            <!-- CARD 2: Examin8 Test Generator (PURPLE THEME) -->
+            <div class="group flex flex-col p-8 md:p-10 rounded-[2.5rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-[0_10px_40px_-10px_rgba(168,85,247,0.2)] transition-all duration-300 relative overflow-hidden h-full">
+                
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <div class="absolute -top-24 -left-24 w-48 h-48 bg-purple-500/20 rounded-full blur-[60px] pointer-events-none"></div>
+
+                <div class="flex flex-col gap-4 mb-5 relative z-10">
+                    <div class="w-12 h-12 p-1.5 rounded-2xl bg-white/80 dark:bg-white/80 backdrop-blur-md border border-slate-200/60 dark:border-white/20 flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                        <img src="images/examin8_logo.webp" alt="Examin8 Logo" class="w-full h-full object-contain" onerror="this.style.display='none'"/>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Examin8 Test Generator</h2>
+                </div>
+                
+                <p class="text-sm font-medium text-slate-600 dark:text-slate-400 leading-relaxed mb-8 flex-grow relative z-10">
+                    Create Question papers <span class="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md bg-purple-100/80 dark:bg-purple-500/20 border border-purple-200/80 dark:border-purple-500/30 text-purple-700 dark:text-purple-300 font-bold shadow-sm">with AI</span> in seconds, from 18 lakh+ Questions using our AI and get your own <span class="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md bg-purple-100/80 dark:bg-purple-500/20 border border-purple-200/80 dark:border-purple-500/30 text-purple-700 dark:text-purple-300 font-bold shadow-sm">Branded Mobile App</span>.
+                </p>
+
+                <div class="mb-10 relative z-10">
+                    <h3 class="text-[10px] font-bold tracking-widest uppercase text-slate-400 dark:text-slate-500 mb-4">What's Included</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">18 lakh+ Questions</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Result & Leaderboard</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Personal App</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Student Management Features</span>
+                    </div>
+                </div>
+
+                <a href="https://examin8.com" target="_blank" class="relative z-10 w-full h-12 flex items-center justify-center rounded-full bg-purple-50 hover:bg-purple-600 text-purple-700 hover:text-white dark:bg-purple-500/10 dark:text-purple-400 dark:hover:bg-purple-600 dark:hover:text-white font-semibold text-sm transition-all mt-auto border border-purple-200/50 dark:border-purple-500/20 hover:border-transparent">
+                    Start Generating &rarr;
+                </a>
+            </div>
+
+            <!-- CARD 3: Learn8 MCQ Practice (EMERALD THEME) -->
+            <div class="group flex flex-col p-8 md:p-10 rounded-[2.5rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-[0_10px_40px_-10px_rgba(16,185,129,0.2)] transition-all duration-300 relative overflow-hidden h-full">
+                
+                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <div class="absolute -top-24 -left-24 w-48 h-48 bg-emerald-500/20 rounded-full blur-[60px] pointer-events-none"></div>
+
+                <div class="flex flex-col gap-4 mb-5 relative z-10">
+                    <div class="w-12 h-12 p-1.5 rounded-2xl bg-white/80 dark:bg-white/80 backdrop-blur-md border border-slate-200/60 dark:border-white/20 flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                        <img src="images/learn8_logo.webp" alt="Learn8 Logo" class="w-full h-full object-contain" onerror="this.style.display='none'"/>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Learn8 MCQ Practice</h2>
+                </div>
+                
+                <p class="text-sm font-medium text-slate-600 dark:text-slate-400 leading-relaxed mb-8 flex-grow relative z-10">
+                    Exclusively practice and analyse unlimited MCQ questions for competitive and <span class="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md bg-emerald-100/80 dark:bg-emerald-500/20 border border-emerald-200/80 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300 font-bold shadow-sm">entrance exams</span> at just <span class="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md bg-emerald-100/80 dark:bg-emerald-500/20 border border-emerald-200/80 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300 font-bold shadow-sm">₹99</span>.
+                </p>
+
+                <div class="mb-10 relative z-10">
+                    <h3 class="text-[10px] font-bold tracking-widest uppercase text-slate-400 dark:text-slate-500 mb-4">What's Included</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">JEE</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">NEET</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">NDA</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">CUET</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">CLAT</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">SSC</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Bank PO</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 text-[11px] font-semibold text-slate-700 dark:text-slate-300">UPSC</span>
+                    </div>
+                </div>
+
+                <a href="https://learn8.in/" target="_blank" class="relative z-10 w-full h-12 flex items-center justify-center rounded-full bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white dark:bg-emerald-500/10 dark:text-emerald-400 dark:hover:bg-emerald-600 dark:hover:text-white font-semibold text-sm transition-all mt-auto border border-emerald-200/50 dark:border-emerald-500/20 hover:border-transparent">
+                    Start Practicing &rarr;
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- PREMIUM GLASSMORPHIC COMPARE SECTION (ORIGINAL CONTENT) -->
+<section id="compare" class="relative w-full py-24 md:py-32 font-sans overflow-hidden bg-slate-50 dark:bg-[#09090b] border-t border-slate-200/50 dark:border-slate-800/50">
+    
+    <!-- AI SaaS Mesh Gradient Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-400/20 dark:bg-blue-600/10 blur-[120px] mix-blend-multiply dark:mix-blend-screen"></div>
+        <div class="absolute bottom-[20%] right-[-10%] w-[40%] h-[60%] rounded-full bg-purple-400/20 dark:bg-purple-600/10 blur-[120px] mix-blend-multiply dark:mix-blend-screen"></div>
+    </div>
+
+    <!-- Fading Grid Background (Dark Mode ONLY) -->
+    <div class="absolute inset-0 pointer-events-none hidden dark:block bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_20%,transparent_100%)]"></div>
+    
+    <div class="relative z-10 max-w-9xl mx-auto px-6 md:px-12">
+        <!-- Section Header (Restored Original Content) -->
+        <div class="mb-16 md:mb-24 flex flex-col items-center text-center gap-5 max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">myCBSEguide</span> Student Subscription
+            </h2>
+            
+            <p class="w-full text-base md:text-lg font-medium text-slate-600 dark:text-slate-400 leading-relaxed md:leading-[1.6]">
+                Physical books can't provide instant evaluation, performance analytics, or interactive practice. myCBSEguide complements your books with online tests, chapter-wise question banks, smart revision tools and study on the go—all in one place.
+            </p>
+        </div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 md:gap-0 max-w-5xl mx-auto items-stretch">
+            
+            <!-- Subtle Thunderbolt Badge -->
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/60 dark:bg-[#09090b]/80 backdrop-blur-md text-blue-500 border border-slate-200/80 dark:border-slate-800 shadow-sm transition-transform hover:scale-105">
+                <svg class="w-4 h-4 fill-current opacity-80" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+            </div>
+            
+            <!-- Left: Physical Books (Standard Glassmorphic Card) -->
+            <div class="flex flex-col p-8 md:p-10 rounded-[2rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none md:rounded-r-none relative z-10 opacity-90 transition-all duration-300 hover:opacity-100">
+                <div class="mb-10">
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">
+                        Physical Books
+                    </h3>
+                </div>
+
+                <div class="space-y-6 mb-12 flex-1">
+                    <div class="flex items-center justify-between group">
+                        <div class="flex items-center gap-4">
+                            <img src="//media-mycbseguide.s3.amazonaws.com/v1.8.5/study/images/book_1.jpg" alt="Practice Questions Book" class="w-10 h-14 object-cover rounded-md border border-slate-200 dark:border-slate-700 grayscale opacity-70 transition-all group-hover:grayscale-0 group-hover:opacity-100" onerror="this.src='https://placehold.co/40x56/e2e8f0/475569'" />
+                            <span class="text-sm md:text-base font-semibold text-slate-700 dark:text-slate-300">Practice Questions Book</span>
+                        </div>
+                        <span class="text-sm font-bold font-mono text-slate-500 dark:text-slate-400">₹500</span>
+                    </div>
+                    <div class="w-full h-[1px] bg-slate-200/60 dark:bg-slate-700/50"></div>
+                    
+                    <div class="flex items-center justify-between group">
+                        <div class="flex items-center gap-4">
+                            <img src="//media-mycbseguide.s3.amazonaws.com/v1.8.5/study/images/book_2.jpg" alt="Latest Sample Papers" class="w-10 h-14 object-cover rounded-md border border-slate-200 dark:border-slate-700 grayscale opacity-70 transition-all group-hover:grayscale-0 group-hover:opacity-100" onerror="this.src='https://placehold.co/40x56/e2e8f0/475569'" />
+                            <span class="text-sm md:text-base font-semibold text-slate-700 dark:text-slate-300">Latest Sample Papers</span>
+                        </div>
+                        <span class="text-sm font-bold font-mono text-slate-500 dark:text-slate-400">₹300</span>
+                    </div>
+                    <div class="w-full h-[1px] bg-slate-200/60 dark:bg-slate-700/50"></div>
+                    
+                    <div class="flex items-center justify-between group">
+                        <div class="flex items-center gap-4">
+                            <img src="//media-mycbseguide.s3.amazonaws.com/v1.8.5/study/images/book_3.jpg" alt="NCERT & Exemplar Solutions" class="w-10 h-14 object-cover rounded-md border border-slate-200 dark:border-slate-700 grayscale opacity-70 transition-all group-hover:grayscale-0 group-hover:opacity-100" onerror="this.src='https://placehold.co/40x56/e2e8f0/475569'" />
+                            <span class="text-sm md:text-base font-semibold text-slate-700 dark:text-slate-300">NCERT & Exemplar Solutions</span>
+                        </div>
+                        <span class="text-sm font-bold font-mono text-slate-500 dark:text-slate-400">₹200</span>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-slate-200/80 dark:border-slate-800/80 flex justify-between items-end mt-auto">
+                    <div>
+                        <span class="block text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-1">₹1,000 × 5 Subjects</span>
+                        <span class="text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-widest">Total</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white tabular-nums tracking-tighter">
+                            <span class="text-slate-400 dark:text-slate-500 text-xl md:text-2xl mr-0.5">₹</span>5,000
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: myCBSEguide (Hero Premium Tier - Always Dark with original content) -->
+            <div class="relative h-full z-20 md:scale-[1.02]">
+                <!-- Outer Ambient Glow -->
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-[2rem] blur-xl opacity-30 pointer-events-none"></div>
+                
+                <!-- Forced dark mode classes for premium SaaS feel -->
+                <div class="relative overflow-hidden h-full rounded-[2rem] bg-[#0f172a]/95 backdrop-blur-2xl border-2 border-blue-500/50 shadow-2xl p-8 md:p-10 flex flex-col">
+                    
+                    <div class="flex items-center justify-between mb-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white flex items-center gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
+                            myCBSEguide Subscription
+                        </h3>
+                    </div>
+
+                    <!-- Original 4 Features Content Structure -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 mb-12 flex-1">
+                        <div class="flex gap-4">
+                            <div class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                <svg class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white mb-1">Practice Questions</h4>
+                                <p class="text-xs md:text-sm font-medium text-slate-400 leading-relaxed">Practice with thousands of questions based on the latest exam pattern.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                <svg class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white mb-1">PYQs & Notes</h4>
+                                <p class="text-xs md:text-sm font-medium text-slate-400 leading-relaxed">Access PYQs, Sample Papers, Notes, and Tests in One Place</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                <svg class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white mb-1">Latest Edition</h4>
+                                <p class="text-xs md:text-sm font-medium text-slate-400 leading-relaxed">Our question bank and resources are updated regularly.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                <svg class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white mb-1">Study Anywhere</h4>
+                                <p class="text-xs md:text-sm font-medium text-slate-400 leading-relaxed">Access your study materials anytime, on any device.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-700/80 flex flex-col justify-between gap-6 mt-auto">
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-1">
+                                <span class="text-4xl md:text-5xl font-extrabold text-white tabular-nums tracking-tighter">₹699</span>
+                                <span class="text-xs md:text-sm font-bold tracking-widest uppercase text-blue-400">/ all subjects</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Premium Action Button -->
+                        <a href="https://mycbseguide.com/dashboard/" target="_blank" rel="noopener noreferrer" class="relative flex justify-center items-center w-full h-14 rounded-full text-base font-semibold text-white bg-slate-800 overflow-hidden shadow-[0_0_20px_rgba(59,130,246,0.3)] group">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-90 transition-opacity group-hover:opacity-100"></div>
+                            <span class="relative z-10 flex justify-center items-center gap-2">
+                                Get Started
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+    
+<!-- PREMIUM GLASSMORPHIC RESOURCES SECTION -->
+<section id="resources" class="relative w-full py-24 md:py-32 font-sans overflow-hidden bg-slate-50 dark:bg-[#09090b] border-t border-slate-200/50 dark:border-slate-800/50">
+    
+    <!-- AI SaaS Mesh Gradient Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-400/20 dark:bg-blue-600/10 blur-[120px] mix-blend-multiply dark:mix-blend-screen"></div>
+        <div class="absolute bottom-[20%] right-[-10%] w-[40%] h-[60%] rounded-full bg-purple-400/20 dark:bg-purple-600/10 blur-[120px] mix-blend-multiply dark:mix-blend-screen"></div>
+    </div>
+
+    <!-- Fading Grid Background (Dark Mode ONLY) -->
+    <div class="absolute inset-0 pointer-events-none hidden dark:block bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_20%,transparent_100%)]"></div>
+    
+    <div class="px-6 md:px-12 mx-auto max-w-7xl relative z-10">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center justify-center space-y-5 text-center mb-16 md:mb-20 max-w-3xl mx-auto">
+            
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+                Everything in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">One Subscription</span>
+            </h2>
+            
+            <p class="max-w-2xl text-base md:text-lg font-medium leading-relaxed text-slate-600 dark:text-slate-400">
+                Unlock your all-in-one digital library for exam success. Explore thousands of practice questions, sample papers, revision notes, and essential study resources.
+            </p>
+        </div>
+
+        <!-- JS Injection Container -->
+        <div id="resources-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Cards will be injected here by JavaScript -->
+        </div>
+    </div>
+</section>
+    
+<!-- PREMIUM GLASSMORPHIC PRICING SECTION -->
+<section id="pricing" class="relative w-full py-24 md:py-32 font-sans overflow-hidden bg-slate-50 dark:bg-[#09090b] border-t border-slate-200/50 dark:border-slate-800/50">
+    
+    <!-- AI SaaS Mesh Gradient Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-400/20 dark:bg-blue-600/10 blur-[120px] mix-blend-multiply dark:mix-blend-screen"></div>
+        <div class="absolute bottom-[20%] right-[-10%] w-[40%] h-[60%] rounded-full bg-purple-400/20 dark:bg-purple-600/10 blur-[120px] mix-blend-multiply dark:mix-blend-screen"></div>
+    </div>
+
+    <!-- Fading Grid Background (Dark Mode ONLY) -->
+    <div class="absolute inset-0 pointer-events-none hidden dark:block bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_20%,transparent_100%)]"></div>
+
+    <div class="px-6 md:px-12 mx-auto max-w-7xl relative z-10">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col items-center justify-center space-y-5 text-center mb-14 max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+                Affordable Plans <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">for Everyone</span>
+            </h2>
+            
+            <p class="max-w-2xl text-base md:text-lg font-medium leading-relaxed text-slate-600 dark:text-slate-400">
+                Transparent pricing tailored to your class and target exam.
+            </p>
+        </div>
+
+        <!-- Glassmorphic Promo Box -->
+        <div class="max-w-2xl mx-auto mb-12 relative group">
+            <!-- Glowing Shadow -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-md opacity-20 group-hover:opacity-30 transition-opacity pointer-events-none"></div>
+            
+            <!-- Box Content -->
+            <div class="relative flex flex-col sm:flex-row items-center justify-center gap-4 text-center bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl border border-blue-200/50 dark:border-blue-500/30 px-6 py-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none">
+                <div class="flex items-center justify-center gap-3 text-slate-700 dark:text-slate-300 font-semibold text-sm md:text-base">
+                    <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 shadow-inner">
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
+                    </div>
+                    <span>
+                        Use code 
+                        <span class="inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900/30 rounded-md border border-blue-200 dark:border-blue-700/50 font-bold font-mono text-blue-700 dark:text-blue-400 tracking-wider mx-1 select-all shadow-sm">STUDENT</span> 
+                        to get <span class="text-blue-600 dark:text-blue-400 font-bold">10% OFF</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Glassmorphic Filter Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 relative z-30 w-full max-w-3xl mx-auto p-2 sm:p-2.5 bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 rounded-[24px] shadow-sm">
+            
+            <div class="relative flex items-center p-1.5 bg-white/80 dark:bg-[#09090b]/80 rounded-[18px] border border-slate-200/80 dark:border-slate-700/80 shadow-inner w-full sm:w-auto flex-shrink-0">
+                <div id="category-slider" class="absolute left-1.5 top-1.5 bottom-1.5 w-[calc(50%-6px)] bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm transition-transform duration-300 ease-out"></div>
+                
+                <button type="button" class="category-btn relative z-10 w-full sm:w-40 py-2 text-sm font-bold tracking-wide text-slate-900 dark:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl" data-target="cbse">
+                    CBSE
+                </button>
+                <button type="button" class="category-btn relative z-10 w-full sm:w-40 py-2 text-sm font-bold tracking-wide text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl" data-target="entrance">
+                    Entrance Exams
+                </button>
+            </div>
+
+            <div class="relative w-full flex-grow">
+                <button id="dropdown-button" type="button" class="w-full flex items-center justify-between px-6 py-3 bg-white/80 dark:bg-[#09090b]/80 border border-slate-200/80 dark:border-slate-700/80 rounded-[18px] text-sm font-bold text-slate-800 dark:text-slate-200 hover:border-blue-400 dark:hover:border-blue-500 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm group">
+                    <span id="dropdown-selected" class="tracking-wide">Class 10</span>
+                    <div class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 transition-colors">
+                        <svg class="w-4 h-4 text-slate-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-transform duration-300" id="dropdown-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                </button>
+                
+                <div id="dropdown-menu" class="absolute left-0 right-0 top-full mt-2 bg-white/95 dark:bg-[#09090b]/95 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/80 rounded-2xl shadow-xl opacity-0 invisible translate-y-[-10px] transition-all duration-200 z-50 overflow-hidden max-h-72 overflow-y-auto custom-scrollbar">
+                    <ul id="dropdown-list" class="p-2 space-y-1">
+                        <!-- Options injected by JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-10 text-center">
+            <h3 id="current-selection-title" class="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 transition-opacity duration-300">
+                Plans for Class 10
+            </h3>
+        </div>
+
+        <div id="pricing-cards-container" class="grid gap-8 lg:gap-8 lg:grid-cols-3 items-stretch max-w-[70rem] mx-auto relative z-10">
+            <!-- Cards will be injected here by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- PREMIUM GLASSMORPHIC TEACHER SECTION -->
+<section id="teacher" class="relative w-full py-24 md:py-32 font-sans overflow-hidden bg-slate-50 dark:bg-[#09090b] border-t border-slate-200/50 dark:border-slate-800/50">
+    
+    <!-- AI SaaS Mesh Gradient Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[10%] left-[20%] w-[40%] h-[40%] rounded-full bg-blue-400/20 dark:bg-blue-600/10 blur-[120px] mix-blend-multiply dark:mix-blend-screen"></div>
+        <div class="absolute bottom-[10%] right-[20%] w-[40%] h-[40%] rounded-full bg-purple-400/20 dark:bg-purple-600/10 blur-[120px] mix-blend-multiply dark:mix-blend-screen"></div>
+    </div>
+
+    <!-- Fading Grid Background (Dark Mode ONLY) -->
+    <div class="absolute inset-0 pointer-events-none hidden dark:block bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_20%,transparent_100%)]"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col items-center justify-center space-y-5 text-center mb-16 md:mb-20 max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+                Are you a <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">teacher?</span>
+            </h2>
+            
+            <p class="max-w-2xl text-base md:text-lg font-medium leading-relaxed text-slate-600 dark:text-slate-400">
+                Empower your teaching and grow your institute with our powerful digital solutions.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-10 items-stretch max-w-6xl mx-auto">
+            
+<!-- Examin8 Box (Left Side) -->
+<div class="flex flex-col p-8 md:p-10 rounded-[2rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)] transition-all duration-300 relative overflow-hidden group">
+    
+    <!-- Logo Container -->
+    <div class="mb-5 relative z-10">
+        <div class="w-12 h-12 p-1.5 rounded-2xl bg-white/80 dark:bg-white/80 backdrop-blur-md border border-slate-200/60 dark:border-white/20 flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:scale-105">
+            <img src="images/examin8_logo.webp" alt="Examin8 Logo" class="w-full h-full object-contain" onerror="this.style.display='none'"/>
+        </div>
+    </div>
+
+    <!-- Flex-grow container that vertically centers the content to eliminate empty space -->
+    <div class="flex flex-col flex-grow justify-center">
+        <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-5 leading-tight">
+            Create Question Papers <br/> 
+            <span class="inline-flex items-center mt-2 px-3 py-1 rounded-2xl bg-blue-100/80 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 backdrop-blur-md">with AI</span> 
+            in seconds
+        </h3>
+        
+        <!-- Subtle Fading SaaS Line -->
+        <div class="w-full max-w-sm h-px bg-gradient-to-r from-slate-200 via-slate-300 to-transparent dark:from-slate-700 dark:via-slate-600 dark:to-transparent mb-6"></div>
+        
+        <p class="text-sm md:text-base font-medium text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+            Create Question Papers & Conduct Online Tests from our database of 18 lakh+ Questions using the New Examin8 AI and get your own Branded Mobile App.
+        </p>
+        
+        <!-- Glassmorphic Stats Grid -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-8 py-8 px-5 rounded-2xl bg-white/50 dark:bg-[#09090b]/40 border border-slate-200/60 dark:border-slate-700/50 shadow-sm backdrop-blur-sm">
+            <div class="flex flex-col items-center justify-center text-center gap-1.5">
+                <svg class="w-5 h-5 text-blue-500 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                <span class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">12k+</span>
+                <span class="text-[9px] font-bold tracking-widest uppercase text-slate-500">Institutes</span>
+            </div>
+            <div class="flex flex-col items-center justify-center text-center gap-1.5">
+                <svg class="w-5 h-5 text-indigo-500 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <span class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">1 lakh+</span>
+                <span class="text-[9px] font-bold tracking-widest uppercase text-slate-500">Teachers</span>
+            </div>
+            <div class="flex flex-col items-center justify-center text-center gap-1.5">
+                <svg class="w-5 h-5 text-purple-500 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <span class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">18 lakh+</span>
+                <span class="text-[9px] font-bold tracking-widest uppercase text-slate-500">Questions</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CTA Buttons & Microcopy -->
+    <div class="mt-auto flex flex-col gap-3 pt-2">
+        <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://app.examin8.com/home" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center h-12 rounded-full text-sm font-semibold text-slate-900 bg-white hover:bg-slate-50 dark:bg-white dark:hover:bg-slate-100 transition-colors border border-slate-200 dark:border-transparent shadow-sm">
+                Start Generating &rarr;
+            </a>
+            <a href="https://wa.me/918287743418?text=I%20am%20interested%20in%20the%20Examin8%20Test%20Generator%20and%20want%20a%201-on-1%20demo%20for%20the%20same.%20Kindly%20process%20this%20request." target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center h-12 rounded-full text-sm font-semibold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+                <svg class="w-4 h-4 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                Request Demo
+            </a>
+        </div>
+        <p class="text-center text-[11px] sm:text-xs font-medium text-slate-500 dark:text-slate-400 mt-2">
+            No credit card required • <span class="text-emerald-600 dark:text-emerald-400 font-bold">Unlimited Free Tier included</span>
+        </p>
+    </div>
+</div>
+            
+            <!-- White-label App (Hero Premium Amber Box - Right Side) -->
+            <div class="relative h-full md:scale-[1.02] flex flex-col">
+                <!-- Outer Ambient Glow -->
+                <div class="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-[2rem] blur-xl opacity-30 dark:opacity-40 pointer-events-none"></div>
+                
+                <div class="relative flex flex-col flex-grow p-8 md:p-10 rounded-[2rem] bg-[#0f172a]/95 backdrop-blur-2xl border-2 border-amber-400/50 shadow-2xl overflow-hidden group transition-all duration-300">
+                    
+                    <!-- Exclusive Beta Ribbon -->
+                    <div class="absolute top-0 right-0 bg-gradient-to-bl from-amber-400 to-orange-500 text-slate-900 text-[10px] font-bold px-4 py-2 rounded-bl-2xl tracking-widest uppercase shadow-sm">
+                        Exclusive Beta
+                    </div>
+                    
+                    <div class="mb-6 flex-grow pt-2">
+                        <h3 class="text-2xl md:text-3xl font-light text-white tracking-tight mb-1">Elevate Your Institute</h3>
+                        <p class="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 mb-8">Get Your Own App.</p>
+                        
+                        <!-- Pricing Breakdown -->
+                        <div class="flex flex-col gap-3 mb-8 p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[11px] font-bold tracking-widest uppercase text-slate-400">Yearly App License</span>
+                                <div class="text-right">
+                                    <span class="text-sm line-through decoration-slate-600 text-slate-500 mr-2">₹8,000</span>
+                                    <span class="text-3xl md:text-4xl font-bold text-white tabular-nums tracking-tighter">₹3,000</span>
+                                </div>
+                            </div>
+                            <div class="text-right text-[10px] font-bold text-amber-400/80 tracking-widest uppercase border-b border-white/10 pb-4">
+                                Beta Price for 1000 Users
+                            </div>
+                            <div class="flex justify-between items-center pt-3">
+                                <span class="text-[11px] font-bold tracking-widest uppercase text-slate-400">Premium Content</span>
+                                <span class="text-sm md:text-base font-bold text-white">₹50 <span class="text-[10px] text-slate-500 font-bold tracking-widest uppercase">/Student/Sub</span></span>
+                            </div>
+                        </div>
+
+                        <!-- Feature List -->
+                        <ul class="grid grid-cols-1 gap-y-4 mb-8">
+                            <li class="flex items-start text-sm font-medium text-slate-300 leading-relaxed">
+                                <span class="flex items-center justify-center shrink-0 w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 mr-3 mt-0.5">
+                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </span>
+                                <span>Look professional and stand out with your own app.</span>
+                            </li>
+                            <li class="flex items-start text-sm font-medium text-slate-300 leading-relaxed">
+                                <span class="flex items-center justify-center shrink-0 w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 mr-3 mt-0.5">
+                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </span>
+                                <span>All your students get their dashboard & report.</span>
+                            </li>
+                            <li class="flex items-start text-sm font-medium text-slate-300 leading-relaxed">
+                                <span class="flex items-center justify-center shrink-0 w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 mr-3 mt-0.5">
+                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </span>
+                                <span>Share tests, resources, manage batches and more!</span>
+                            </li>
+                            <li class="flex items-start text-sm font-medium text-slate-300 leading-relaxed">
+                                <span class="flex items-center justify-center shrink-0 w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 mr-3 mt-0.5">
+                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </span>
+                                <span>Conduct online tests and get results with leaderboards.</span>
+                            </li>
+                            <li class="flex items-start text-sm font-medium text-slate-300 leading-relaxed">
+                                <span class="flex items-center justify-center shrink-0 w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 mr-3 mt-0.5">
+                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </span>
+                                <span>Manage fees and attendance of your students seamlessly.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScoFt9xm62FfXt1NK50KYshjsMVcerfOOgb5ez2oKa5ZgyKpw/viewform" target="_blank" rel="noopener noreferrer" class="relative flex justify-center items-center w-full h-14 rounded-full text-base font-semibold text-slate-900 bg-amber-400 overflow-hidden shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-transform hover:scale-[1.02] mt-auto">
+                        <div class="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-500 opacity-90 transition-opacity hover:opacity-100"></div>
+                        <span class="relative z-10 flex items-center gap-2">
+                            Proceed &rarr;
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Custom Plan (Glassmorphic Full Width) -->
+            <div class="md:col-span-2 flex flex-col p-8 md:p-10 rounded-[2rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none relative overflow-hidden group transition-all hover:border-indigo-400/50 hover:shadow-[0_10px_40px_-10px_rgba(99,102,241,0.15)] mt-4">
+                
+                <!-- Background decorative SVG -->
+                <div class="absolute -top-10 -right-10 opacity-5 dark:opacity-10 pointer-events-none transition-transform group-hover:scale-110 duration-700 ease-out">
+                    <svg class="w-64 h-64 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm6.8 7.5L12 14.1l-6.8-3.6L12 6.9l6.8 3.6z"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 19.27l-5-2.73v-1.91l5 2.73 5-2.73v1.91l-5 2.73z"/></svg>
+                </div>
+
+                <div class="mb-10 relative z-10">
+                    <div class="inline-flex items-center rounded-full px-4 py-1.5 text-[10px] font-bold tracking-widest uppercase bg-indigo-100/80 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400 border border-indigo-200/50 dark:border-indigo-800/50 backdrop-blur-md mb-5">
+                        Exclusive
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">Multi-class Student Subscription <span class="text-indigo-600 dark:text-indigo-400">(for teachers)</span></h3>
+                    <p class="text-base font-medium text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+                        If you teach a single subject across multiple classes (e.g., Math for classes 9-12) and want a specialized student subscription of all those classes with only your specific subject, we can tailor a plan just for you.
+                    </p>
+                </div>
+                
+                <!-- Glassmorphic Contact Buttons -->
+                <div class="flex flex-col sm:flex-row flex-wrap gap-4 mt-auto relative z-10">
+                    <!-- Phone Button -->
+                    <a href="tel:+918448425258" class="inline-flex items-center justify-center gap-2.5 h-12 px-8 rounded-xl text-sm font-bold bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700 hover:text-blue-600 hover:border-blue-300 dark:hover:text-blue-400 dark:hover:border-blue-700/50 transition-all shadow-sm">
+                        <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        +91 8448425258
+                    </a>
+                    
+                    <!-- WhatsApp Button -->
+                    <a href="https://api.whatsapp.com/send/?phone=919213522769" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 h-12 px-8 rounded-xl text-sm font-bold bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700 hover:text-emerald-600 hover:border-emerald-300 dark:hover:text-emerald-400 dark:hover:border-emerald-700/50 transition-all shadow-sm">
+                        <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp
+                    </a>
+                    
+                    <!-- Decoded Email Button (Standard Mailto link) -->
+                    <a href="mailto:care@mycbseguide.com" class="inline-flex items-center justify-center gap-2.5 h-12 px-8 rounded-xl text-sm font-bold bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700 hover:text-purple-600 hover:border-purple-300 dark:hover:text-purple-400 dark:hover:border-purple-700/50 transition-all shadow-sm">
+                        <svg class="w-4 h-4 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        care@mycbseguide.com
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+    <!-- PREMIUM GLASSMORPHIC SCALE SECTION -->
+<section class="relative w-full py-24 md:py-32 font-sans overflow-hidden bg-slate-50 dark:bg-[#09090b] border-t border-slate-200/50 dark:border-slate-800/50">
+    
+    <!-- Central AI SaaS "Nova" Glow Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none flex items-center justify-center">
+        <div class="absolute w-[80%] h-[80%] max-w-3xl rounded-full bg-blue-500/10 dark:bg-blue-600/20 blur-[100px] md:blur-[150px] mix-blend-multiply dark:mix-blend-screen"></div>
+        <div class="absolute w-[60%] h-[60%] max-w-xl rounded-full bg-purple-500/10 dark:bg-purple-600/20 blur-[100px] md:blur-[150px] mix-blend-multiply dark:mix-blend-screen"></div>
+    </div>
+
+    <!-- Fading Grid Background (Dark Mode ONLY) -->
+    <div class="absolute inset-0 pointer-events-none hidden dark:block bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_20%,transparent_100%)]"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <div class="flex flex-col items-center justify-center space-y-12 text-center">
+            
+            <!-- Header Area -->
+            <div class="space-y-5">
+                <!-- Glassmorphic Pill -->
+                <span class="inline-flex items-center rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase border border-blue-200/50 dark:border-blue-500/20 bg-blue-50/80 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 shadow-sm backdrop-blur-md">
+                    Our Scale
+                </span>
+                
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.2] max-w-4xl text-slate-900 dark:text-white">
+                    Trusted Across <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">India</span>
+                </h2>
+            </div>
+            
+            <!-- Glassmorphic Stat Cards -->
+            <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+                <!-- Stat 1 -->
+                <div class="flex flex-col items-center justify-center p-10 rounded-[2rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)] transition-all duration-300 group">
+                    <span class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 tracking-tight tabular-nums mb-3 group-hover:scale-105 transition-transform duration-300">1.4 Cr+</span>
+                    <span class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Registered Students</span>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="flex flex-col items-center justify-center p-10 rounded-[2rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)] transition-all duration-300 group">
+                    <span class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 tracking-tight tabular-nums mb-3 group-hover:scale-105 transition-transform duration-300">12 Lakh+</span>
+                    <span class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Verified Teachers</span>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="flex flex-col items-center justify-center p-10 rounded-[2rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)] transition-all duration-300 group">
+                    <span class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 tracking-tight tabular-nums mb-3 group-hover:scale-105 transition-transform duration-300">12,000+</span>
+                    <span class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Institutes & Schools</span>
+                </div>
+            </div>
+            
+            <!-- Animated SaaS CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 pt-8 w-full sm:w-auto justify-center">
+                <!-- Primary Button -->
+                <a href="https://mycbseguide.com/dashboard/" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center gap-2 h-14 px-10 rounded-full text-base font-semibold text-white bg-slate-900 dark:bg-white dark:text-slate-900 overflow-hidden shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-transform hover:scale-[1.02]">
+                    <span class="relative z-10 flex items-center gap-2">
+                        Get Started
+                    </span>
+                </a>
+                
+                <!-- Secondary Button (Glassmorphic) -->
+                <a href="https://play.google.com/store/apps/details?id=in.techchefs.MyCBSEGuide&hl=en_IN" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-14 px-10 rounded-full text-base font-semibold bg-white/60 dark:bg-white/5 backdrop-blur-md border border-slate-200/60 dark:border-slate-700/50 text-slate-700 dark:text-slate-300 shadow-sm transition-all hover:bg-white dark:hover:bg-white/10 hover:scale-[1.02]">
+                    Install App
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="w-full pt-16 pb-10 border-t bg-white border-slate-200 dark:bg-[#0A0F1C] dark:border-[#1E293B]">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-12 relative">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3 font-bold text-lg text-slate-900 dark:text-white">
+                    <img src="//media-mycbseguide.s3.amazonaws.com/v1.8.5/study/images/mcg_logo.png" alt="myCBSEguide Logo" class="w-7 h-7 object-contain" />
+                    myCBSEguide
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="tel:+91-8448425258" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-brand-600 dark:text-slate-500 dark:hover:text-brand-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-sm">
+                    <svg class="w-5 h-5 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=919213522769" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-emerald-600 dark:text-slate-500 dark:hover:text-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-sm">
+                    <svg class="w-5 h-5 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/><path d="m9 10 2 2-2 2"/><path d="m15 10-2 2 2 2"/></svg>
+                </a>
+                <a href="/cdn-cgi/l/email-protection#5a393b283f1a37233938293f3d2f333e3f74393537" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-brand-600 dark:text-slate-500 dark:hover:text-brand-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-sm">
+                    <svg class="w-5 h-5 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-slate-200 dark:border-[#1E293B]">
+            <div class="flex flex-col gap-8">
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">All Courses</h4>
+                    <ul class="space-y-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+                        <li><a href="https://mycbseguide.com/dashboard/home" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Student Dashboard</a></li>
+                        <li><a href="https://mycbseguide.com/course/cbse/2877/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE</a></li>
+                        <li><a href="https://mycbseguide.com/course/entrance-exam/2878/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Entrance Exams</a></li>
+                        <li><a href="https://mycbseguide.com/course/competitive-exams/3313/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Competitive Exams</a></li>
+                        <li><a href="https://mycbseguide.com/course/icse-&-isc/4176/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">ICSE & ISC</a></li>
+                        <li><a href="https://mycbseguide.com/course/teacher-exams/2879/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Teachers Exams</a></li>
+                        <li><a href="https://mycbseguide.com/course/up-board/2880/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">UP Board</a></li>
+                        <li><a href="https://mycbseguide.com/course/uttarakhand-board/3747/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Uttarakhand Board</a></li>
+                        <li><a href="https://mycbseguide.com/course/bihar-board/10200/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Bihar Board</a></li>
+                        <li><a href="https://mycbseguide.com/course/chhattisgarh-board/10201/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Chhattisgarh Board</a></li>
+                        <li><a href="https://mycbseguide.com/course/haryana-board/10202/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Haryana Board</a></li>
+                        <li><a href="https://mycbseguide.com/course/jharkhand-board/10203/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Jharkhand Board</a></li>
+                        <li><a href="https://mycbseguide.com/course/mp-board/10204/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">MP Board</a></li>
+                        <li><a href="https://mycbseguide.com/course/rajasthan-board/10205/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Rajasthan Board</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">Other Websites</h4>
+                    <ul class="space-y-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+                        <li><a href="https://examin8.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Examin8.com</a></li>
+                        <li><a href="https://learn8.in/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Learn8.in</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">CBSE Courses</h4>
+                <ul class="space-y-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+                    <li><a href="https://mycbseguide.com/course/cbse-class-12/1250/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 12</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-11/1339/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 11</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-10/1175/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 10</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-09/1217/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 09</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-08/1443/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 08</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-07/1444/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 07</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-06/1445/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 06</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-05/1446/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 05</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-04/1447/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 04</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-03/1448/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 03</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-02/2599/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 02</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-class-01/2600/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 01</a></li>
+                    <li><a href="https://mycbseguide.com/course/cbse-pre-school/2594/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Pre School</a></li>
+                    <li><a href="https://mycbseguide.com/course/entrance-exam-jee-main/2593/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">JEE Main</a></li>
+                    <li><a href="https://mycbseguide.com/course/entrance-exam-neet-ug/1835/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NEET UG</a></li>
+                    <li><a href="https://mycbseguide.com/course/competitive-exams-nda/9615/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NDA</a></li>
+                    <li><a href="https://mycbseguide.com/course/teacher-exams-ctet/2582/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CTET</a></li>
+                    <li><a href="https://mycbseguide.com/blog/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">News & Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col gap-8">
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+                        <li><a href="https://mycbseguide.com/blog/cbse-sample-papers-for-all-classes-and-subjects/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Sample Papers</a></li>
+                        <li><a href="https://mycbseguide.com/cbse-test-papers.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Test Papers</a></li>
+                        <li><a href="https://mycbseguide.com/cbse-online-tests.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE MCQ Tests</a></li>
+                        <li><a href="https://mycbseguide.com/cbse-question-papers.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE 10 Year Papers</a></li>
+                        <li><a href="https://mycbseguide.com/cbse-syllabus.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Syllabus</a></li>
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-of-ncert-books-all-classes/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions</a></li>
+                        <li><a href="https://mycbseguide.com/cbse-revision-notes.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Revision Notes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">Corporate</h4>
+                    <ul class="space-y-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+                        <li><a href="https://mycbseguide.com/about-us.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">About Us</a></li>
+                        <li><a href="https://mycbseguide.com/disclaimer.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Disclaimer</a></li>
+                        <li><a href="https://mycbseguide.com/tos.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Terms of Service</a></li>
+                        <li><a href="https://mycbseguide.com/privacy-policy.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Privacy Policy</a></li>
+                        <li><a href="https://mycbseguide.com/tos.html#refund" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Refund & Cancellation</a></li>
+                        <li><a href="https://mycbseguide.com/media/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">In News</a></li>
+                        <li><a href="https://mycbseguide.com/team/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Team</a></li>
+                        <li><a href="https://mycbseguide.com/contactus/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Contact Us</a></li>
+                        <li><a href="https://mycbseguide.com/teachers/me/status/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">Join Us as Teacher</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-8">
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">NCERT Solutions</h4>
+                    <ul class="space-y-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-for-class-12/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 12</a></li>
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-for-class-11/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 11</a></li>
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-for-class-10/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 10</a></li>
+                        <li><a href="https://mycbseguide.com/blog/category/ncert-solutions/ncert-solutions-class-9/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 09</a></li>
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-for-class-08/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 08</a></li>
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-for-class-07/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 07</a></li>
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-for-class-06/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 06</a></li>
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-for-class-05/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 05</a></li>
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-for-class-04/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 04</a></li>
+                        <li><a href="https://mycbseguide.com/blog/ncert-solutions-for-class-03/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">NCERT Solutions for Class 03</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">CBSE Sample Papers</h4>
+                    <ul class="space-y-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+                        <li><a href="https://mycbseguide.com/blog/cbse-class-12-sample-question-papers/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 12 Sample Papers</a></li>
+                        <li><a href="https://mycbseguide.com/blog/cbse-class-11-sample-question-papers/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 11 Sample Papers</a></li>
+                        <li><a href="https://mycbseguide.com/blog/cbse-class-10-sample-question-papers/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 10 Sample Papers</a></li>
+                        <li><a href="https://mycbseguide.com/blog/cbse-class-9-sample-question-papers/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Class 09 Sample Papers</a></li>
+                        <li><a href="https://mycbseguide.com/cbse-results.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Results</a></li>
+                        <li><a href="https://mycbseguide.com/cbse-datesheet.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">CBSE Datesheet</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-slate-200 dark:border-[#1E293B]">
+            <div class="flex flex-wrap gap-6 text-xs sm:text-sm uppercase tracking-widest font-bold text-slate-500">
+                <span>&copy; 2007-<span id="year"></span> myCBSEguide.</span>
+                <a href="https://mycbseguide.com/tos.html" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">Terms</a>
+                <a href="https://mycbseguide.com/privacy-policy.html" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">Privacy</a>
+                <a href="https://mycbseguide.com/contactus/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">Support</a>
+            </div>
+
+            <div class="text-xs sm:text-sm font-bold uppercase tracking-widest flex items-center gap-2 text-slate-500">
+                <svg class="w-3.5 h-3.5 text-brand-500 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Noida, Uttar Pradesh
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // --- Pricing JS Logic ---
+        const pricingDatabase = {
+            cbse: {
+                "Class 12": [
+                    { name: "Class 12 (PCM)", desc: "Valid till 31 March 2027", price: "699", features: ["25,603 Practice Questions", "13,638 PYQs", "84 Sample Papers", "1,037 Worksheets", "361 Online Tests & Quizzes", "3,532 Revision Notes & Cards"] },
+                    { name: "Class 12 (PCM) + CUET + JEE (Main & Adv)", desc: "Valid till 31 May 2027", price: "999", features: ["2,07,262 Practice Questions", "29,681 PYQs", "84 Sample Papers", "1,037 Worksheets", "1,797 Online Tests & Quizzes", "17,212 Revision Notes & Cards"] },
+                    { name: "Class 12 (PCB)", desc: "Valid till 31 March 2027", price: "699", features: ["27,221 Practice Questions", "12,825 PYQs", "72 Sample Papers", "975 Worksheets", "440 Online Tests & Quizzes", "3,809 Revision Notes & Cards"] },
+                    { name: "Class 12 (PCB) + CUET + NEET (UG)", desc: "Valid till 31 March 2027", price: "999", features: ["1,18,286 Practice Questions", "19,076 PYQs", "72 Sample Papers", "975 Worksheets", "1,616 Online Tests & Quizzes", "14,724 Revision Notes & Cards"] },
+                    { name: "Class 12 (Commerce)", desc: "Valid till 31 March 2027", price: "599", features: ["9,912 Practice Questions", "10,287 PYQs", "72 Sample Papers", "840 Worksheets", "213 Online Tests & Quizzes", "3,161 Revision Notes & Cards"] },
+                    { name: "Class 12 (Commerce) + CUET", desc: "Valid till 31 May 2027", price: "999", features: ["55,821 Practice Questions", "10,287 PYQs", "72 Sample Papers", "840 Worksheets", "747 Online Tests & Quizzes", "6,483 Revision Notes & Cards"] },
+                    { name: "Class 12 (Humanities)", desc: "Valid till 31 March 2027", price: "599", features: ["15,591 Practice Questions", "16,458 PYQs", "120 Sample Papers", "1,291 Worksheets", "164 Online Tests & Quizzes", "5,427 Revision Notes & Cards"] },
+                    { name: "Class 12 (Humanities) + CUET + CLAT", desc: "Valid till 31 May 2028", price: "999", features: ["60,132 Practice Questions", "17,160 PYQs", "120 Sample Papers", "1,291 Worksheets", "778 Online Tests & Quizzes", "10,003 Revision Notes & Cards"] },
+                ],
+                "Class 11": [
+                    { name: "Class 11 (PCM)", desc: "Valid till 31 March 2027", price: "699", features: ["29,734 Practice Questions", "55 Sample Papers", "361 Worksheets", "260 Online Tests & Quizzes", "2,964 Revision Notes & Cards"] },
+                    { name: "Class 11 + 12 (PCM) + CUET + JEE (Main & Adv)", desc: "Valid till 31 March 2028", price: "1199", features: ["2,36,996 Practice Questions", "29,681 PYQs", "139 Sample Papers", "1,398 Worksheets", "2,057 Online Tests & Quizzes", "20,176 Revision Notes & Cards"] },
+                    { name: "Class 11 (PCB)", desc: "Valid till 31 March 2027", price: "699", features: ["33,717 Practice Questions", "55 Sample Papers", "355 Worksheets", "278 Online Tests & Quizzes", "3,226 Revision Notes & Cards"] },
+                    { name: "Class 11 + 12 (PCB) + CUET + NEET (UG)", desc: "Valid till 31 March 2028", price: "1199", features: ["1,51,003 Practice Questions", "19,076 PYQs", "127 Sample Papers", "1,330 Worksheets", "1,894 Online Tests & Quizzes", "17,950 Revision Notes & Cards"] },
+                    { name: "Class 11 (Commerce)", desc: "Valid till 31 March 2027", price: "599", features: ["5,889 Practice Questions", "66 Sample Papers", "408 Worksheets", "196 Online Tests & Quizzes", "2,064 Revision Notes & Cards"] },
+                    { name: "Class 11 + 12 (Commerce) + CUET", desc: "Valid till 31 March 2028", price: "999", features: ["61,710 Practice Questions", "10,287 PYQs", "138 Sample Papers", "1,248 Worksheets", "943 Online Tests & Quizzes", "8,547 Revision Notes & Cards"] },
+                    { name: "Class 11 (Humanities)", desc: "Valid till 31 March 2027", price: "599", features: ["4,033 Practice Questions", "77 Sample Papers", "305 Worksheets", "69 Online Tests & Quizzes", "3,780 Revision Notes & Cards"] },
+                    { name: "Class 11 + 12 (Humanities) + CUET", desc: "Valid till 31 March 2028", price: "999", features: ["63,463 Practice Questions", "17,160 PYQs", "197 Sample Papers", "1,596 Worksheets", "792 Online Tests & Quizzes", "13,783 Revision Notes & Cards"] },
+                ],
+                "Class 10": [
+                    { name: "Class 10 + Olympiads", desc: "Valid till 31 March 2027", price: "699", features: ["30,687 Practice Questions", "19,065 PYQs", "151 Sample Papers", "1,127 Worksheets", "422 Online Tests & Quizzes", "3,973 Revision Notes & Cards"] },
+                    { name: "Class 10 + Olympiads + NTSE", desc: "Valid till 31 March 2028", price: "999", features: ["33,089 Practice Questions", "19,068 PYQs", "151 Sample Papers", "1,144 Worksheets", "563 Online Tests & Quizzes", "3,973 Revision Notes & Cards"] }
+                ],
+                "Class 9": [
+                    { name: "Class 9 + Olympiads", desc: "Valid till 31 March 2027", price: "599", features: ["20,875 Practice Questions", "477 Worksheets", "2,654 Revision Cards"] },
+                    { name: "Class 9 / 10 + Olympiads", desc: "Valid till 31 March 2028", price: "999", features: ["51,562 Practice Questions", "19,065 PYQs", "151 Sample Papers", "1,604 Worksheets", "422 Online Tests & Quizzes", "6,627 Revision Notes & Cards"] },
+                    { name: "Class 9 / 10 + Olympiads + NTSE", desc: "Valid till 31 March 2029", price: "1199", features: ["53,964 Practice Questions", "19,068 PYQs", "151 Sample Papers", "1,621 Worksheets", "563 Online Tests & Quizzes", "6,627 Revision Notes & Cards"] }
+                ],
+                "Class 8": [
+                    { name: "Class 8 + Olympiads", desc: "Valid till 31 March 2027", price: "599", features: ["12,079 Practice Questions", "452 Worksheets", "3,046 Revision Cards"] },
+                    { name: "Class 8 / 9 + Olympiads", desc: "Valid till 31 March 2028", price: "999", features: ["32,954 Practice Questions", "929 Worksheets", "5,700 Revision Cards"] },
+                    { name: "Class 8 / 9 / 10 + Olympiads + NTSE", desc: "Valid till 31 March 2029", price: "1199", features: ["66,043 Practice Questions", "19,068 PYQs", "151 Sample Papers", "2,073 Worksheets", "563 Online Tests & Quizzes", "9,673 Revision Notes & Cards"] }
+                ],
+                "Class 7": [
+                    { name: "Class 7 + Olympiads", desc: "Valid till 31 March 2027", price: "599", features: ["18,294 Practice Questions", "522 Worksheets", "2,977 Revision Cards"] },
+                    { name: "Class 7 / 8 + Olympiads", desc: "Valid till 31 March 2028", price: "999", features: ["30,373 Practice Questions", "974 Worksheets", "6,023 Revision Cards"] },
+                    { name: "Class 7 / 8 / 9 + Olympiads", desc: "Valid till 31 March 2029", price: "1199", features: ["51,248 Practice Questions", "1,451 Worksheets", "8,677 Revision Cards"] }
+                ],
+                "Class 6": [
+                    { name: "Class 6 + Olympiads", desc: "Valid till 31 March 2027", price: "599", features: ["18,827 Practice Questions", "461 Worksheets", "140 Online Tests", "3,495 Revision Cards"] },
+                    { name: "Class 6 / 7 + Olympiads", desc: "Valid till 31 March 2028", price: "999", features: ["37,121 Practice Questions", "983 Worksheets", "6,472 Revision Cards"] },
+                    { name: "Class 6 / 7 / 8 + Olympiads", desc: "Valid till 31 March 2029", price: "1199", features: ["49,200 Practice Questions", "1,435 Worksheets", "9,518 Revision Cards"] }
+                ],
+                "Class 5": [
+                    { name: "Class 5 + Olympiads", desc: "Valid till 31 March 2027", price: "499", features: ["16,921 Practice Questions", "723 Worksheets", "275 Online Tests"] },
+                    { name: "Class 5 / 6 + Olympiads", desc: "Valid till 31 March 2028", price: "799", features: ["35,748 Practice Questions", "1,184 Worksheets", "415 Online Tests", "3,495 Revision Cards"] },
+                    { name: "Class 5 / 6 / 7 + Olympiads", desc: "Valid till 31 March 2029", price: "999", features: ["54,042 Practice Questions", "1,706 Worksheets", "6,472 Revision Cards"] }
+                ],
+                "Class 4": [
+                    { name: "Class 4 + Olympiads", desc: "Valid till 31 March 2027", price: "499", features: ["9,084 Practice Questions", "555 Worksheets", "173 Online Tests"] },
+                    { name: "Class 4 / 5 + Olympiads", desc: "Valid till 31 March 2028", price: "799", features: ["26,005 Practice Questions", "1,278 Worksheets", "448 Online Tests"] },
+                    { name: "Class 4 / 5 / 6 + Olympiads", desc: "Valid till 31 March 2029", price: "999", features: ["44,832 Practice Questions", "1,739 Worksheets", "588 Online Tests", "3,495 Revision Cards"] }
+                ],
+                "Class 3": [
+                    { name: "Class 3 + Olympiads", desc: "Valid till 31 March 2027", price: "499", features: ["8,318 Practice Questions", "470 Worksheets", "150 Online Tests"] },
+                    { name: "Class 3 / 4 + Olympiads", desc: "Valid till 31 March 2028", price: "799", features: ["17,402 Practice Questions", "1,025 Worksheets", "323 Online Tests"] },
+                    { name: "Class 3 / 4 / 5 + Olympiads", desc: "Valid till 31 March 2029", price: "999", features: ["34,323 Practice Questions", "1,748 Worksheets", "598 Online Tests"] }
+                ]
+            },
+            entrance: {
+                "JEE Main & Adv": [
+                    { name: "JEE Main", desc: "Valid till 30 April 2027", price: "499", features: ["56,874 Practice Questions", "11,092 PYQs", "5,445 Revision Cards", "867 Online Tests"] },
+                    { name: "JEE Adv", desc: "Valid till 31 May 2027", price: "499", features: ["67,484 Practice Questions", "4,951 PYQs", "5,714 Revision Cards", "82 Online Tests"] },
+                    { name: "JEE Main + Adv", desc: "Valid till 30 April 2027", price: "699", features: ["1,24,358 Practice Questions", "16,043 PYQs", "11,159 Revision Cards", "949 Online Tests"] }
+                ],
+                "NEET UG": [
+                    { name: "NEET UG", desc: "Valid till 31 May 2027", price: "499", features: ["61,800 Practice Questions", "6,251 PYQs", "816 Online Tests", "7,554 Revision Cards"] }
+                ],
+                "CUET UG": [
+                    { name: "CUET UG (All Subjects)", desc: "Valid till 31 May 2027", price: "499", features: ["88,451 Practice Questions", "1,204 Online Tests & Quizzes", "10,818 Revision Cards"] }
+                ],
+                "CLAT UG": [
+                    { name: "CLAT UG", desc: "Valid till 31 Dec 2026", price: "299", features: ["702 PYQs", "55 Online Tests"] }
+                ]
+            }
+        };
+
+        // --- Resources JS Logic (Upgraded to Glassmorphism) ---
+        const resources = [
+            { title: "PYQ Question Bank", desc: "Previous Year Questions for thorough practice." },
+            { title: "CBSE Sample Papers", desc: "Based on the latest exam pattern and syllabus." },
+            { title: "Practice Questions", desc: "Thousands of questions to build your concepts." },
+            { title: "Chapter-wise Worksheets", desc: "Evaluate your preparation with mock tests." },
+            { title: "Case Study Questions", desc: "Specialized questions for competency building." },
+            { title: "NCERT + Exempler Solutions", desc: "Detailed step-by-step textbook solutions." },
+            { title: "Revision Notes", desc: "Quick flashcards and notes for fast review." },
+            { title: "Last Year Papers", desc: "Official CBSE past papers with marking schemes." },
+            { title: "Topper Answersheets", desc: "Learn how to write perfect answers." }
+        ];
+
+        const resourcesGrid = document.getElementById('resources-grid');
+        if (resourcesGrid) {
+            resources.forEach(res => {
+                resourcesGrid.insertAdjacentHTML('beforeend', `
+                    <div class="group relative w-full h-full flex flex-col rounded-3xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)]">
+                        <div class="mb-2 flex-grow">
+                            <div class="flex items-start justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">${res.title}</h3>
+                            </div>
+                            <p class="text-sm font-medium text-slate-600 dark:text-slate-400 leading-relaxed">${res.desc}</p>
+                        </div>
+                    </div>
+                `);
+            });
+        }
+
+        let currentCategory = 'cbse';
+
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const slider = document.getElementById('category-slider');
+        const dropdownBtn = document.getElementById('dropdown-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const dropdownList = document.getElementById('dropdown-list');
+        const dropdownSelected = document.getElementById('dropdown-selected');
+        const dropdownIcon = document.getElementById('dropdown-icon');
+        const selectionTitle = document.getElementById('current-selection-title');
+        const cardsContainer = document.getElementById('pricing-cards-container');
+
+        function getOriginalPrice(priceStr) {
+            const price = parseInt(priceStr);
+            if (price <= 299) return "499";
+            if (price <= 499) return "899";
+            if (price <= 599) return "999";
+            if (price <= 699) return "1199";
+            if (price <= 799) return "1399";
+            if (price <= 999) return "1799";
+            if (price <= 1199) return "2199";
+            return Math.round(price * 1.75).toString();
+        }
+
+        function renderDropdown(options) {
+            dropdownList.innerHTML = '';
+            options.forEach(option => {
+                const li = document.createElement('li');
+                // Updated to use blue-600/400 for hover
+                li.innerHTML = `<button type="button" class="w-full text-left px-4 py-3 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 hover:text-blue-600 dark:text-slate-300 dark:hover:bg-slate-800/80 dark:hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">${option}</button>`;
+                li.querySelector('button').addEventListener('click', () => {
+                    selectOption(option);
+                    closeDropdown();
+                });
+                dropdownList.appendChild(li);
+            });
+        }
+
+        function selectOption(option) {
+            dropdownSelected.textContent = option;
+            renderCards(option, currentCategory);
+        }
+
+        function toggleDropdown() {
+            const isClosed = dropdownMenu.classList.contains('opacity-0');
+            if (isClosed) {
+                dropdownMenu.classList.remove('opacity-0', 'invisible', 'translate-y-[-10px]');
+                dropdownIcon.style.transform = 'rotate(180deg)';
+                // Updated to use blue border
+                dropdownBtn.classList.add('border-blue-400', 'dark:border-blue-500', 'shadow-md');
+            } else {
+                closeDropdown();
+            }
+        }
+
+        function closeDropdown() {
+            dropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-[-10px]');
+            dropdownIcon.style.transform = 'rotate(0deg)';
+            // Updated to remove blue border
+            dropdownBtn.classList.remove('border-blue-400', 'dark:border-blue-500', 'shadow-md');
+        }
+
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDropdown();
+        });
+        
+        dropdownMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        
+        document.addEventListener('click', () => closeDropdown());
+
+        categoryBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                const target = btn.getAttribute('data-target');
+                if (target === currentCategory) return;
+                currentCategory = target;
+                
+                slider.style.transform = index === 0 ? 'translateX(0)' : 'translateX(100%)';
+                
+                categoryBtns.forEach(b => {
+                    b.classList.remove('text-slate-900', 'dark:text-white');
+                    b.classList.add('text-slate-500');
+                });
+                btn.classList.add('text-slate-900', 'dark:text-white');
+                btn.classList.remove('text-slate-500');
+
+                const availableLevels = Object.keys(pricingDatabase[currentCategory]);
+                renderDropdown(availableLevels);
+                
+                const defaultSelection = availableLevels.includes('Class 10') ? 'Class 10' : availableLevels[0];
+                selectOption(defaultSelection); 
+            });
+        });
+
+        function renderCards(level, category) {
+            selectionTitle.style.opacity = 0;
+            cardsContainer.style.opacity = 0;
+            cardsContainer.classList.add('transition-opacity', 'duration-300');
+            
+            setTimeout(() => {
+                selectionTitle.textContent = `Plans for ${level}`;
+                
+                const plans = pricingDatabase[category][level];
+                cardsContainer.innerHTML = ''; 
+
+                plans.forEach(plan => {
+                    const featuresHtml = plan.features.map(f => {
+                        const highlightedFeature = f.replace(/(\d+(?:,\d+)*\+?)/g, 
+                            '<span class="font-display font-black text-slate-900 dark:text-white text-[1.1rem] mx-1">$1</span>');
+                        
+                        return `
+                        <li class="flex items-start text-sm md:text-[15px] font-medium text-slate-600 dark:text-slate-300 group/feature py-1">
+                            <div class="flex-shrink-0 mr-4 mt-1 w-5 h-5 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400">
+                                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="leading-relaxed flex-1">${highlightedFeature}</span>
+                        </li>
+                    `}).join('');
+
+                    let cleanName = plan.name;
+                    let badgeHtml = '';
+
+                    const badgeConfigs = [
+                        { match: '+ Olympiads + NTSE', text: '+ Olympiads & NTSE' },
+                        { match: '+ CUET + JEE (Main & Adv)', text: '+ CUET & JEE (main + adv)' },
+                        { match: '+ CUET + NEET (UG)', text: '+ CUET & NEET' },
+                        { match: '+ CUET + CLAT', text: '+ CUET & CLAT' },
+                        { match: '+ CUET', text: '+ CUET' },
+                        { match: '+ Olympiads', text: '+ Olympiads' }
+                    ];
+
+                    for (const config of badgeConfigs) {
+                        if (cleanName.includes(config.match)) {
+                            cleanName = cleanName.replace(config.match, '').trim();
+                            // Upgraded badge to a modern gradient
+                            badgeHtml = `
+                                <div class="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-display text-[10px] font-bold px-4 py-2 rounded-bl-2xl tracking-widest uppercase shadow-[0_4px_10px_rgba(59,130,246,0.3)] z-20 flex items-center gap-1.5">
+                                    ${config.text}
+                                </div>`;
+                            break; 
+                        }
+                    }
+
+                    const oldPriceStr = getOriginalPrice(plan.price);
+                    const oldPriceNum = parseInt(oldPriceStr);
+                    const newPriceNum = parseInt(plan.price.replace(/,/g, ''));
+                    const savePercent = Math.round(((oldPriceNum - newPriceNum) / oldPriceNum) * 100);
+
+                    // Upgraded card wrapper, save badge, and CTA button to match SaaS Glassmorphism
+                    const cardHtml = `
+                        <div class="relative flex flex-col h-full rounded-[2rem] bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)] overflow-hidden">
+                            
+                            ${badgeHtml}
+
+                            <div class="mb-8 relative z-10 pt-2 pr-12">
+                                <h3 class="text-2xl font-display font-bold tracking-tight text-slate-900 dark:text-white mb-2">${cleanName}</h3>
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">${plan.desc}</p>
+                            </div>
+                            
+                            <div class="flex flex-col mb-8 relative z-10">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="text-lg font-bold text-slate-400 dark:text-slate-500 line-through decoration-2 decoration-slate-300 dark:decoration-slate-600">₹${oldPriceStr}</span>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-900/40 px-2.5 py-1 rounded-md border border-blue-200 dark:border-blue-800/50">Save ${savePercent}%</span>
+                                </div>
+                                <div class="flex items-start leading-none">
+                                    <span class="text-3xl font-bold text-slate-900 dark:text-white mt-1 mr-1">₹</span>
+                                    <span class="text-[3.5rem] font-display font-bold tracking-tighter text-slate-900 dark:text-white leading-[0.9]">${plan.price}</span>
+                                </div>
+                            </div>
+                            
+                            <div class="w-full h-[1px] bg-slate-200/60 dark:bg-slate-700/50 mb-8"></div>
+                            
+                            <ul class="space-y-4 mb-10 flex-grow relative z-10">
+                                ${featuresHtml}
+                            </ul>
+                            
+                            <a href="https://mycbseguide.com/dashboard" target="_blank" rel="noopener noreferrer" class="mt-auto flex items-center justify-center w-full h-14 rounded-full text-base font-semibold text-white bg-slate-900 dark:bg-white dark:text-slate-900 overflow-hidden shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900">
+                                Know More
+                            </a>
+                        </div>
+                    `;
+                    cardsContainer.insertAdjacentHTML('beforeend', cardHtml);
+                });
+
+                selectionTitle.style.opacity = 1;
+                cardsContainer.style.opacity = 1;
+            }, 250);
+        }
+
+        const initialLevels = Object.keys(pricingDatabase.cbse);
+        renderDropdown(initialLevels);
+        const defaultClass = initialLevels.includes('Class 10') ? 'Class 10' : initialLevels[0];
+        selectOption(defaultClass); 
+
+        // --- Theme Toggle Logic ---
+        const themeToggles = document.querySelectorAll('.theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                htmlElement.classList.toggle('dark');
+            });
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('menu-visible');
+            mobileMenu.classList.add('menu-hidden');
+            iconMenu.classList.add('block');
+            iconMenu.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            iconClose.classList.remove('block');
+            document.body.classList.remove('overflow-hidden');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        mobileBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isHidden = mobileMenu.classList.contains('menu-hidden');
+            
+            if (isHidden) {
+                mobileMenu.classList.remove('menu-hidden');
+                mobileMenu.classList.add('menu-visible');
+                iconMenu.classList.add('hidden');
+                iconMenu.classList.remove('block');
+                iconClose.classList.add('block');
+                iconClose.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+                mobileBtn.setAttribute('aria-expanded', 'true');
+            } else {
+                closeMobileMenu();
+            }
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // --- Fix for Resize State Leak ---
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('menu-visible')) {
+                closeMobileMenu();
+            }
+        });
+        
+        document.getElementById('year').innerText = new Date().getFullYear();
+    });
+</script>
+
+
+
+
+
+  </div>
+<!--
+<script type="text/javascript">
+  $(document).ready(function(){
+    var u = top.location.toString();
+      var domain = 'm123y123c123b123s123e123g123u123i123d123e.123c123o123m'.toString();
+      var domain_decrypted = domain.replace(/123/gi, '');
+      if (u.indexOf(domain_decrypted) == -1) {
+          var data = "<h1 style='color:red;'>Incorrect URL accessed!!!!</h1>";
+          data = data + "<h1>Please check website URL</h1>";
+          data = data + "<h1>Incorrect URL <strike>" + top.location.toString()+ "</strike></h1>";
+          data = data + "<h1 style='color:green;'>Correct URL: http://" + domain_decrypted + "/</h1>";
+          document.body.innerHTML = data;
+      }
+  });
+</script>
+-->
+
+   <!-- temp js start - will be optimized later -->
+
+  <!-- JS
+    ============================================ -->
+
+
+    <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
+
+   <!-- temp js end - will be optimized later -->
+
+    <!-- Material Design Icons & website base theme -->
+
+    <noscript id="deferred-styles">
+      <!-- <link rel="stylesheet" type="text/css" href="//media-mycbseguide.s3.amazonaws.com/v1.8.5/study/study.vendor.3.3.0.css"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet"> -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement);
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+    
+      <!-- <script defer src="//media-mycbseguide.s3.amazonaws.com/v1.8.5/study/study.vendor.3.3.0.js"></script> -->
+    
+
+
+
+    <!--
+<div class="modal" id="processing-wait-screen-modal" tabindex="-1"
+    role="dialog" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <span class="glyphicon glyphicon-time">
+                    </span>Please Wait..
+                 </h4>
+            </div>
+            <div class="modal-body">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info
+                    progress-bar-striped active"
+                    style="width: 100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<div class="process-modal" id="loading" >
+
+</div>
+
+
+
+    <script 
+      type="text/javascript"
+      src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+      id="aisensy-wa-widget"
+      widget-id="aaaakd"
+    >
+    </script>
+</body>
+
+</html>
